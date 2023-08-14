@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Опрос к свадьбе</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align title">Анкета</h1>
+        <h2 class="center-align posttitle">Дорогие друзья! Заполните, пожалуйста, небольшую анкету для организации дня нашей свадьбы 7 октября 2023 г.</h2>
+        <form id="form" class="row">
+            <input type="text" name="name" required placeholder="Ваше имя" class="col s12 m4 offset-m1 name">
+            <input type="text" name="surname" required placeholder="Ваша фамилия" class="col s12 m4 offset-m2 name">
+            
+            <div id="drink" class="col s12 m6">
+                <h2 class="subtitle">Предпочитаемые напитки:</h2>                
+                <p><label><input type="radio" name="drink" value="Красное вино" id="wine_red"><span>Красное вино</span></label></p>
+                <p><label><input type="radio" name="drink" value="Белое вино" id="wine_white"><span>Белое вино</span></label></p>
+                <p><label><input type="radio" name="drink" value="Шампанское" id="champagne"><span>Шампанское</span></label></p>
+                <p><label><input type="radio" name="drink" value="Коньяк" id="cognac"><span>Коньяк</span></label></p>
+                <p><label><input type="radio" name="drink" value="Водка" id="vodka"><span>Водка</span></label></p>
+                <p><label><input type="radio" name="drink" value="Пиво" id="beer"><span>Пиво</span></label></p>
+                <p><label><input type="radio" name="drink" value="Ром" id="rum"><span>Ром</span></label></p>
+                <p><label><input type="radio" name="drink" value="Не буду пить алкоголь" id="no_drink"><span>Не буду пить алкоголь</span></label></p>
+                <p><label><input type="radio" name="drink" value="Свой вариант:" id="myDrinkOption"><span>Свой вариант:</span></label></p>        
+            </div>
+            
+            <div id="food" class="col s12 m6">
+                <h2 class="subtitle">Есть ли у вас предпочтения по еде?</h2>
+                <p><label><input type="radio" name="food" value="Нет предпочтений" id="no_food"><span>Нет предпочтений</span></label></p>
+                <p><label><input type="radio" name="food" value="Не ем мясо" id="no_meat"><span>Не ем мясо</span></label></p>
+                <p><label><input type="radio" name="food" value="Не ем рыбу" id="no_fish"><span>Не ем рыбу</span></label></p>
+                <p><label><input type="radio" name="food" value="Вегетарианец" id="vegeterian"><span>Вегетарианец</span></label></p>
+                <p><label><input type="radio" name="food" value="Свой вариант:" id="myFoodOption"><span>Свой вариант:</span></label></p>
+            </div>
+            
+            <div id="children" class="col s12 m6">
+                <h2 class="subtitle">Будет ли с вами ребенок?</h2>
+                <p><label><input type="radio" name="children" value="Да" id="children+"><span>Да</span></label></p>
+                <p><label><input type="radio" name="children" value="Нет" id="children-"><span>Нет</span></label></p>
+            </div>
+            
+            <div id="place" class="col s12 m6">
+                <h2 class="subtitle">Вы присоединитесь к нам:</h2>
+                <p><label><input type="radio" name="place" value="В ЗАГСе (в 15:30)" id="registry"><span>В ЗАГСе (в 15:30)</span></label></p>
+                <p><label><input type="radio" name="place" value="В банкетном зале (в 17:00)" id="hall"><span>В банкетном зале (в 17:00)</span></label></p>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light">Отправить</button>
+        </form>
+    </div>
+    <div id="overlay" class="overlay">
+        <div class="modal">
+            <p class="subtitle">Спасибо за Ваше сообщение!</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="src/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Caveat-Regular';
+    src: url('Caveat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+};
+* {
+    box-sizing: border-box;
+}
+body {
+    background: url(./bg_up.jpg) top left / 30vh no-repeat,
+                url(./bg_down.jpg) right bottom / 40vh no-repeat;
+}
+.name::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+.btn {
+    display: block;
+    margin: 3em auto;
+    width: 14em;
+}
+p {
+    margin: 0;
+}
+.title {
+    font-size: 30px;
+}
+.posttitle {
+    font-family: 'Caveat-Regular';
+    max-width: 85%;
+    font-size: 26px;
+    margin: 0.5em auto;
+}
+.subtitle {
+    font-size: 24px;
+}
+span {
+    color: rgba(0, 0, 0, 0.8);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (width < 601px) {
+    body {
+        background-size: 40%;
+    }    
+}
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0, .56);
+    z-index: 100; 
+    animation: openModal 1.5s forwards;  
+    animation: closeModal 4s forwards;   
+}
+.modal {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 3em;
+    border-radius: 10px;    
+}
+header {
+    opacity: 0;
+    animation: ani 2.5s forwards;
+  }
+@keyframes openModal {
+    0% {opacity: 0; display: block;}
+    100% {opacity: 1;}
+}
+@keyframes closeModal {
+    0% {opacity: 0;}
+    37.5% {opacity: 1;}
+    62.5% {opacity: 1;}
+    100% {opacity: 0; display: none;}
+}
