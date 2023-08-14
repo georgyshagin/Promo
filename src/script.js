@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 myDrinkInput.remove();
             }
         });        
+        
     }    
     const showMyFoodInput = function() {
         const myFood = document.querySelector('#food');
@@ -39,21 +40,10 @@ document.addEventListener('DOMContentLoaded', function(){
         setTimeout(() => overlay.style.display = '', 4000);
     }
 
-    // const sendForm = (formData) => {
-    //     const response = fetch("phpmailer/send.php", {
-    //         method: "POST",
-    //         body: formData
-    //     });
-    //     if (!response.ok) {
-    //         throw new Error(`Ошибка по адресу ${url}, статус ошибки ${response.status}`);
-    //     }
-    //     return response.text();
-    // };
     const form = document.querySelector('#form');
 
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
-        // const formData = new FormData(this);
         
         let response = await fetch('phpmailer/send.php', {
             method: 'POST',
@@ -62,15 +52,6 @@ document.addEventListener('DOMContentLoaded', function(){
         
         form.reset(); // очищаем поля формы
         showModal();
-        
-        
-
-        // sendForm(formData)
-        //     .then((response) => {
-        //         form.reset(); // очищаем поля формы
-        //         showModal();
-        //     })
-        //     .catch((err) => console.error(err))
     });   
 
     showMyDrinkInput();
